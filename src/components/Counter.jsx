@@ -5,7 +5,10 @@ function Counter() {
     <>
       <button onClick={() => setCount(count + 1)}> + </button>
       <h3>{count}</h3>
-      <button onClick={() => setCount(count - 1)}> - </button>
+      <button onClick={() => setCount(count > 0 ? count - 1 : count)}>
+        {" "}
+        -
+      </button>
     </>
   );
 }
